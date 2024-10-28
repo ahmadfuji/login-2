@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class dashboardpage extends StatelessWidget {
   final String tUser;
 
-  dashboardpage({required this.tUser});
+  const dashboardpage({super.key, required this.tUser});
 
   @override
   Widget build(BuildContext context) {

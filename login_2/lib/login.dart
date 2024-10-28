@@ -19,7 +19,7 @@ class _LoginpageState extends State<Loginpage> {
       body: Form(
         key: formKey,
         child: Center(
-          child: Container(
+          child: SizedBox(
             width: 280, height: 230,
             child: Card(
               elevation: 10,
@@ -35,7 +35,7 @@ class _LoginpageState extends State<Loginpage> {
                         labelText: 'Username',
                         hintText: 'Input Username',
                         border: OutlineInputBorder(
-                          borderSide: BorderSide(width: 1),
+                          borderSide: const BorderSide(width: 1),
                           borderRadius: BorderRadius.circular(10),
                         )
                       ),
@@ -53,7 +53,7 @@ class _LoginpageState extends State<Loginpage> {
                         labelText: 'Password',
                         hintText: 'Input Password',
                         border: OutlineInputBorder(
-                          borderSide: BorderSide(width: 1),
+                          borderSide: const BorderSide(width: 1),
                           borderRadius: BorderRadius.circular(10),
                         )
                       ),
@@ -76,8 +76,8 @@ class _LoginpageState extends State<Loginpage> {
                               context: context,
                               builder: (context){
                                 return AlertDialog(
-                                  title: Text('Konfirmasi Login'),
-                                  content: Text('Username atau Password Salah'),
+                                  title: const Text('Konfirmasi Login'),
+                                  content: const Text('Username atau Password Salah'),
                                   actions: [
                                     ElevatedButton(
                                       onPressed: (){
@@ -85,7 +85,7 @@ class _LoginpageState extends State<Loginpage> {
                                         cPass.text='';
                                         Navigator.of(context).pop();
                                       }, 
-                                      child: Text('OK')
+                                      child: const Text('OK')
                                     )
                                   ],
                                 );
@@ -94,7 +94,7 @@ class _LoginpageState extends State<Loginpage> {
                           }
                         }
                       },
-                      child: Text('LOGIN')
+                      child: const Text('LOGIN')
                     ),
                   ],
                 ),
